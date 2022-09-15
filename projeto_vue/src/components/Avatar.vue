@@ -2,6 +2,7 @@
     <img :src="avatar" :alt="descricao">
 </template>
 
+<script>
 export default {
     name: 'Avatar',
     data() {
@@ -11,3 +12,4 @@ export default {
         }
     }
 }
+</script>

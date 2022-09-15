@@ -8,6 +8,9 @@
                 <li>C#</li>
                 <li>Java</li>
             </ul>
+        <div>
+            <button @click="showEmail">{{ textoBotao }}</button>
+        </div>
         <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
         <!-- o target="_blank" faz com que o link seja aberto em uma outra aba -->
         <p>Para acessar meu portfólio, <a v-bind:href="meu_link" target="_blank">clique aqui</a></p>
@@ -26,9 +29,20 @@ export default {
     data() {
         return {
             esta_trabalhando: true,
-            mostrar_email: true,
+            mostrar_email: false,
             email: 'contato@email.com',
-            meu_link: 'https://google.com'
+            meu_link: 'https://google.com',
+            textoBotao: 'Mostrar e-mail'
+        }
+    },
+    methods: {
+        showEmail() {
+            this.mostrar_email = !this.mostrar_email
+            if(!this.mostrar_email) {
+                this.textoBotao = 'Mostrar e-mail'
+            } else {
+                this.textoBotao = 'Esconder e-mail'
+            }
         }
     }
 }

@@ -18,7 +18,14 @@ export default {
     mounted() {
         setTimeout(() => {
             this.nome = 'Quesada'
-        }, 2000)
+        }, 2000);
+
+        this.lifeCycle()
+    },
+    methods: {
+        lifeCycle() {
+            console.log("Executou!")
+        }
     }
 }
 </script>
