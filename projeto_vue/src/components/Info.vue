@@ -31,11 +31,13 @@ export default {
     components: {
         Avatar
     },
+    props: {
+        email: String,
+        esta_trabalhando: Boolean
+    },
     data() {
         return {
-            esta_trabalhando: true,
             mostrar_email: false,
-            email: 'contato@email.com',
             meu_link: 'https://google.com',
             textoBotao: 'Mostrar e-mail',
             // dados vindo como array
