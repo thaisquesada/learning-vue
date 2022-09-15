@@ -1,6 +1,8 @@
 <template>
   <div>
+    <Header />
     <PrimeiroComponente />
+    <p class="paragrafo-pai">Testando</p>
     <LifeCycle />
     <Pessoa />
   </div>
@@ -10,13 +12,30 @@
   import PrimeiroComponente from './components/PrimeiroComponente.vue';
   import LifeCycle from './components/LifeCycle.vue'
   import Pessoa from './components/Pessoa.vue'
+  import Header from './components/form/Header.vue';
 
   export default {
     name: 'App',
     components: {
-      PrimeiroComponente,
-      LifeCycle,
-      Pessoa
-    }
+    Header,
+    PrimeiroComponente,
+    LifeCycle,
+    Pessoa
+}
   }
 </script>
+
+<style>
+  body {
+    background-color: #333;
+    color: #fff;
+  }
+
+  a {
+    color: red;
+  }
+
+  .teste {
+    background-color: #000;
+  }
+</style>

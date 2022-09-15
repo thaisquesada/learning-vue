@@ -13,7 +13,7 @@
         </div>
         <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
         <!-- o target="_blank" faz com que o link seja aberto em uma outra aba -->
-        <p>Para acessar meu portfólio, <a v-bind:href="meu_link" target="_blank">clique aqui</a></p>
+        <p class="teste">Para acessar meu portfólio, <a v-bind:href="meu_link" target="_blank">clique aqui</a></p>
         <Avatar />
     </div>
 </template>
@@ -47,3 +47,9 @@ export default {
     }
 }
 </script>
+
+<style>
+    .paragrafo-pai {
+        color: red;
+    }
+</style>
