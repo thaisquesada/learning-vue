@@ -1,17 +1,17 @@
 <template>
     <div>
     <img :src="avatar" :alt="descricao">
-    <Reutilizacao />
+    <MudarAvatar @mudar-avatar="trocarAvatar" />
     </div>
 </template>
 
 <script>
-import Reutilizacao from './Reutilizacao.vue';
+import MudarAvatar from './MudarAvatar.vue';
 
 export default {
-    name: "Avatar",
+    name: 'Avatar',
     components: {
-        Reutilizacao
+        MudarAvatar
     },
     data() {
         return {
@@ -19,6 +19,10 @@ export default {
             descricao: "Thais Quesada"
         };
     },
-    components: { Reutilizacao }
+    methods: {
+        trocarAvatar() {
+            this.avatar = "/img/avatar2.png"
+        }
+    }
 }
 </script>
