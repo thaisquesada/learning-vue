@@ -9,17 +9,26 @@
                 <li>Java</li>
             </ul>
         <p v-show="mostrar_email">Mande uma mensagem para: {{ email }}</p>
+        <!-- o target="_blank" faz com que o link seja aberto em uma outra aba -->
+        <p>Para acessar meu portfólio, <a v-bind:href="meu_link" target="_blank">clique aqui</a></p>
+        <Avatar />
     </div>
 </template>
 
 <script>
+import Avatar from './Avatar.vue';
+
 export default {
     name: 'Info',
+    components: {
+        Avatar
+    },
     data() {
         return {
             esta_trabalhando: true,
             mostrar_email: true,
-            email: 'contato@email.com '
+            email: 'contato@email.com',
+            meu_link: 'https://google.com'
         }
     }
 }
