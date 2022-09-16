@@ -81,5 +81,69 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": []
+  "burgers": [
+    {
+      "nome": "Quesada",
+      "pao": "Parmesão e Orégano",
+      "carne": "Picanha",
+      "opcionais": [
+        "Cheddar",
+        "Cebola roxa"
+      ],
+      "status": "Solicitado",
+      "id": 2
+    },
+    {
+      "nome": "Zelda",
+      "pao": "Pão Mexicano",
+      "carne": "Alcatra",
+      "opcionais": [
+        "Cheddar"
+      ],
+      "status": "Solicitado",
+      "id": 3
+    },
+    {
+      "nome": "Thay",
+      "pao": "3 Queijos",
+      "carne": "Veggie burger",
+      "opcionais": [
+        "Tomate",
+        "Bacon"
+      ],
+      "status": "Solicitado",
+      "id": 4
+    },
+    {
+      "nome": "Thata",
+      "pao": "3 Queijos",
+      "carne": "Alcatra",
+      "opcionais": [
+        "Cheddar"
+      ],
+      "status": "Solicitado",
+      "id": 5
+    },
+    {
+      "nome": "AAAA",
+      "pao": "Parmesão e Orégano",
+      "carne": "Picanha",
+      "opcionais": [
+        "Bacon",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 6
+    },
+    {
+      "nome": "asdasdasd",
+      "pao": "Integral",
+      "carne": "Picanha",
+      "opcionais": [
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 7
+    }
+  ]
 }
