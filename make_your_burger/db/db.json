@@ -83,37 +83,48 @@
   ],
   "burgers": [
     {
-      "nome": "Thauis",
-      "pao": "Pão Mexicano",
+      "nome": "Thay",
+      "pao": "3 Queijos",
       "carne": "Picanha",
       "opcionais": [
-        "Bacon",
-        "Salame"
+        "Cheddar",
+        "Cebola roxa"
       ],
       "status": "Solicitado",
       "id": 1
     },
     {
-      "nome": "Zeca",
-      "pao": "Parmesão e Orégano",
-      "carne": "Alcatra",
+      "nome": "Regina",
+      "pao": "Integral",
+      "carne": "Veggie burger",
       "opcionais": [
-        "Bacon",
-        "Salame",
+        "Cheddar",
         "Tomate"
       ],
       "status": "Solicitado",
       "id": 2
     },
     {
-      "nome": "asdasd",
+      "nome": "Ana",
       "pao": "Parmesão e Orégano",
-      "carne": "Picanha",
+      "carne": "Maminha",
       "opcionais": [
-        "Bacon"
+        "Bacon",
+        "Salame",
+        "Pepino"
       ],
       "status": "Solicitado",
       "id": 3
+    },
+    {
+      "nome": "João",
+      "pao": "Italiano Branco",
+      "carne": "Picanha",
+      "opcionais": [
+        "Cheddar"
+      ],
+      "status": "Solicitado",
+      "id": 4
     }
   ]
 }
