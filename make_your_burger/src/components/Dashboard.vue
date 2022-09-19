@@ -74,7 +74,7 @@
 
         },
         async deleteBurger(id) {
-          
+
           const req = await fetch(`http://localhost:3000/burgers/${id}`, {
             method: "DELETE"
           });
@@ -114,7 +114,9 @@
         }
       },
       mounted () {
+
       this.getPedidos()
+      
       }
     }
   </script>
