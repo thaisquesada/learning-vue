@@ -53,18 +53,28 @@
       },
       methods: {
         async getPedidos() {
+
           const req = await fetch('http://localhost:3000/burgers')
+
           const data = await req.json()
+
           this.burgers = data
+
           // resgata os status de pedidos
           this.getStatus()
+
         },
         async getStatus() {
+
           const req = await fetch('http://localhost:3000/status')
+
           const data = await req.json()
+
           this.status = data
+
         },
         async deleteBurger(id) {
+          
           const req = await fetch(`http://localhost:3000/burgers/${id}`, {
             method: "DELETE"
           });
