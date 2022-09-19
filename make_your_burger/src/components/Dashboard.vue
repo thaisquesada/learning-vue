@@ -1,5 +1,6 @@
 <template>
     <div id="burger-table">
+      <Message :msg="msg" v-show="msg" />
       <div>
         <div id="burger-table-heading">
           <div class="order-id">#:</div>
@@ -35,21 +36,27 @@
   </template>
 
   <script>
+  import Message from './Message.vue'
+
     export default {
       name: "Dashboard",
       data() {
         return {
           burgers: null,
           burger_id: null,
-          status: []
+          status: [],
+          msg: null
         }
+      },
+      components: {
+        Message
       },
       methods: {
         async getPedidos() {
           const req = await fetch('http://localhost:3000/burgers')
           const data = await req.json()
           this.burgers = data
-          // Resgata os status de pedidos
+          // resgata os status de pedidos
           this.getStatus()
         },
         async getStatus() {
@@ -61,18 +68,38 @@
           const req = await fetch(`http://localhost:3000/burgers/${id}`, {
             method: "DELETE"
           });
+
           const res = await req.json()
+
+          // mensagem do sistema
+          this.msg = `Pedido cancelado com sucesso!`
+
+          // limpar mensagem
+          setTimeout(() => this.msg = "", 1000);
+
           this.getPedidos()
         },
+
         async updateBurger(event, id) {
+
           const option = event.target.value;
+
           const dataJson = JSON.stringify({status: option});
+
           const req = await fetch(`http://localhost:3000/burgers/${id}`, {
             method: "PATCH",
             headers: { "Content-Type" : "application/json" },
             body: dataJson
           });
+          
           const res = await req.json()
+
+          // mensagem do sistema
+          this.msg = `Pedido nº ${res.id} foi atualizado para ${res.status}!`
+
+          // limpar mensagem
+          setTimeout(() => this.msg = "", 1000);
+
           console.log(res)
         }
       },
